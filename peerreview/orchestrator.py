@@ -143,8 +143,8 @@ class Orchestrator:
             provider=agent.backend.provider, model=agent.backend.model,
             params=agent.backend.params, system_prompt=agent.system_prompt,
             messages=[m.to_dict() for m in (request.messages if request else [])],
-            response_text=result.text, usage=result.usage, latency_ms=result.latency_ms,
-            error=result.error)
+            response_text=result.text, usage=result.usage, tool_calls=result.tool_calls,
+            latency_ms=result.latency_ms, error=result.error)
         if result.error:
             self.reporter.error(f"{result.agent_id} failed: {result.error}")
             self.store.set_agent_status(self.run_id, result.agent_id, "error")

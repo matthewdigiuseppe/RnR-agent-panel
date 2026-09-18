@@ -32,6 +32,7 @@ class TurnResult:
     agent_id: str
     text: str
     usage: dict[str, Any] = field(default_factory=dict)
+    tool_calls: list[dict[str, Any]] = field(default_factory=list)
     latency_ms: int = 0
     error: str | None = None
     request: TurnRequest | None = None
@@ -49,10 +50,12 @@ def _run_isolated(payload: dict[str, Any]) -> dict[str, Any]:
         messages = [ChatMessage(**m) for m in payload["messages"]]
         response = backend.send(messages, payload["system_prompt"])
         return {"text": response.text, "usage": response.usage,
+                "tool_calls": response.tool_calls,
                 "latency_ms": response.latency_ms or int((time.time() - start) * 1000),
                 "error": None}
     except Exception as exc:  # returned rather than raised so one agent cannot kill a run
-        return {"text": "", "usage": {}, "latency_ms": int((time.time() - start) * 1000),
+        return {"text": "", "usage": {}, "tool_calls": [],
+                "latency_ms": int((time.time() - start) * 1000),
                 "error": f"{type(exc).__name__}: {exc}"}
 
 
@@ -86,6 +89,7 @@ class Agent:
         try:
             response = self.backend.send(messages, self.system_prompt)
             return TurnResult(agent_id=self.id, text=response.text, usage=response.usage,
+                              tool_calls=response.tool_calls,
                               latency_ms=response.latency_ms or int((time.time() - start) * 1000))
         except Exception as exc:
             return TurnResult(agent_id=self.id, text="", error=f"{type(exc).__name__}: {exc}",
@@ -144,6 +148,8 @@ class AgentPool:
         with futures.ProcessPoolExecutor(max_workers=min(self.max_workers, len(requests))) as pool:
             for request, raw in zip(requests, pool.map(_run_isolated, payloads)):
                 results.append(TurnResult(agent_id=request.agent_id, text=raw["text"],
-                                          usage=raw["usage"], latency_ms=raw["latency_ms"],
-                                          error=raw["error"], request=request))
+                                          usage=raw["usage"],
+                                          tool_calls=raw.get("tool_calls") or [],
+                                          latency_ms=raw["latency_ms"], error=raw["error"],
+                                          request=request))
         return results

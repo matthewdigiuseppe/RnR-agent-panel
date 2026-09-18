@@ -149,3 +149,27 @@ def test_agent_failure_does_not_abort_the_run(tmp_path):
     reviews = [row for row in store.all_messages(orchestrator.run_id)
                if row["message_type"] == "independent_review"]
     assert {row["sender"] for row in reviews} == {"Reviewer1", "Reviewer3"}
+
+
+class ToolCallingBackend(AgentBackend):
+    provider = "tooly"
+
+    def _send(self, messages, system_prompt, tools):
+        return BackendResponse(text="ok", provider=self.provider, model=self.model,
+                               tool_calls=[{"type": "tool_use", "name": "lookup",
+                                            "input": {"q": "Table 3"}}])
+
+
+def test_tool_calls_reach_the_reproducibility_log(tmp_path):
+    from peerreview.util import jload
+
+    register_backend("tooly", ToolCallingBackend)
+    config = make_project(tmp_path, overrides={"agents": {
+        "reviewer1": {"provider": "tooly", "model": "tooly-1"}}})
+    store = Store(config.db_path)
+    orchestrator = Orchestrator.create(config, store=store, reporter=Reporter(quiet=True))
+    orchestrator.phase1_independent_reviews()
+
+    call = [row for row in store.calls(orchestrator.run_id) if row["agent_id"] == "Reviewer1"][0]
+    assert jload(call["tool_calls_json"], [])[0]["name"] == "lookup"
+    assert call["system_prompt"] and call["messages_json"] and call["latency_ms"] is not None
