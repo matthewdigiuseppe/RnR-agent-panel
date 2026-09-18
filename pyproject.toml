@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "peerreview"
+version = "0.1.0"
+description = "Multi-agent peer-review deliberation system for academic manuscripts"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+pdf = ["pypdf>=4.0"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+peerreview = "peerreview.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["peerreview*"]
+
+[tool.setuptools.package-data]
+peerreview = ["schema.sql"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
