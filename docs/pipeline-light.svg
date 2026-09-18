@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 412" width="900" height="412" role="img" aria-label="Three phases. In phase one the three reviewers write privately to the editor and have no edges between them. In phase two the editor merges their issues into a canonical ledger. In phase three every participant can see every message and reviewers argue with each other. The ledger drives the revision plan.">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#59636e"/></marker><marker id="arrowAccent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0969da"/></marker><marker id="arrowFaint" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#818b98"/></marker></defs>
+<rect width="900" height="412" fill="#ffffff"/>
+<text x="24" y="32" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11" font-weight="700" fill="#0969da" text-anchor="start">01</text><text x="48" y="32" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2328" text-anchor="start">Independent review</text><text x="24" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#818b98" text-anchor="start">reviewers cannot see one another</text>
+<rect x="54" y="76" width="196" height="54" rx="7" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+<text x="70" y="99" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="600" fill="#1f2328" text-anchor="start">Reviewer 1</text>
+<text x="70" y="116" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#59636e" text-anchor="start">substantive / theory</text>
+<line x1="254" y1="103" x2="304" y2="103" stroke="#59636e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="54" y="142" width="196" height="54" rx="7" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+<text x="70" y="165" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="600" fill="#1f2328" text-anchor="start">Reviewer 2</text>
+<text x="70" y="182" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#59636e" text-anchor="start">methods / identification</text>
+<line x1="254" y1="169" x2="304" y2="169" stroke="#59636e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="54" y="208" width="196" height="54" rx="7" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+<text x="70" y="231" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="600" fill="#1f2328" text-anchor="start">Reviewer 3</text>
+<text x="70" y="248" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#59636e" text-anchor="start">generalist / journal</text>
+<line x1="254" y1="235" x2="304" y2="235" stroke="#59636e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<path d="M 46 103 C 26 103 26 169 46 169" fill="none" stroke="#818b98" stroke-width="1.3" stroke-dasharray="4 4"/>
+<path d="M 46 169 C 26 169 26 235 46 235" fill="none" stroke="#818b98" stroke-width="1.3" stroke-dasharray="4 4"/>
+<line x1="28" y1="130" x2="40" y2="142" stroke="#818b98" stroke-width="1.7"/>
+<line x1="40" y1="130" x2="28" y2="142" stroke="#818b98" stroke-width="1.7"/>
+<line x1="28" y1="196" x2="40" y2="208" stroke="#818b98" stroke-width="1.7"/>
+<line x1="40" y1="196" x2="28" y2="208" stroke="#818b98" stroke-width="1.7"/>
+<text x="24" y="292" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#818b98" text-anchor="start">private to the Editor · enforced in the</text>
+<text x="24" y="308" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#818b98" text-anchor="start">database, not in the prompt</text>
+<text x="310" y="32" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11" font-weight="700" fill="#0969da" text-anchor="start">02</text><text x="334" y="32" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2328" text-anchor="start">Consolidation</text><text x="310" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#818b98" text-anchor="start">editor merges, nothing is dropped</text>
+<rect x="310" y="76" width="200" height="82" rx="7" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+<text x="328" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="600" fill="#1f2328" text-anchor="start">Editor</text>
+<text x="328" y="122" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#59636e" text-anchor="start">merges duplicates, keeps</text>
+<text x="328" y="138" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#59636e" text-anchor="start">minority concerns, assigns ids</text>
+<line x1="410" y1="162" x2="410" y2="190" stroke="#59636e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="310" y="196" width="200" height="150" rx="7" fill="#eef1f4" stroke="#0969da" stroke-width="1"/>
+<text x="328" y="222" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11" font-weight="700" fill="#0969da" text-anchor="start" letter-spacing="0.5">ISSUE LEDGER</text>
+<text x="328" y="248" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#1f2328" text-anchor="start">ISSUE-001</text>
+<text x="400" y="248" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#818b98" text-anchor="start">identification</text>
+<text x="328" y="269" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#1f2328" text-anchor="start">ISSUE-002</text>
+<text x="400" y="269" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#818b98" text-anchor="start">interpretation</text>
+<text x="328" y="290" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#1f2328" text-anchor="start">ISSUE-003</text>
+<text x="400" y="290" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#818b98" text-anchor="start">inference</text>
+<text x="328" y="311" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#1f2328" text-anchor="start">ISSUE-004</text>
+<text x="400" y="311" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#818b98" text-anchor="start">ext. validity</text>
+<text x="328" y="332" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#1f2328" text-anchor="start">ISSUE-005</text>
+<text x="400" y="332" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#818b98" text-anchor="start">theory</text>
+<line x1="516" y1="214" x2="550" y2="214" stroke="#59636e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="556" y="32" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11" font-weight="700" fill="#0969da" text-anchor="start">03</text><text x="580" y="32" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2328" text-anchor="start">Shared deliberation</text><text x="556" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#818b98" text-anchor="start">everyone sees every message</text>
+<rect x="556" y="76" width="320" height="190" rx="7" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+<line x1="620" y1="122" x2="812" y2="122" stroke="#818b98" stroke-width="0.8" opacity="0.45"/>
+<line x1="620" y1="122" x2="598" y2="212" stroke="#818b98" stroke-width="0.8" opacity="0.45"/>
+<line x1="620" y1="122" x2="716" y2="228" stroke="#818b98" stroke-width="0.8" opacity="0.45"/>
+<line x1="620" y1="122" x2="834" y2="212" stroke="#818b98" stroke-width="0.8" opacity="0.45"/>
+<line x1="812" y1="122" x2="598" y2="212" stroke="#818b98" stroke-width="0.8" opacity="0.45"/>
+<line x1="812" y1="122" x2="716" y2="228" stroke="#818b98" stroke-width="0.8" opacity="0.45"/>
+<line x1="812" y1="122" x2="834" y2="212" stroke="#818b98" stroke-width="0.8" opacity="0.45"/>
+<line x1="598" y1="212" x2="716" y2="228" stroke="#818b98" stroke-width="0.8" opacity="0.45"/>
+<line x1="598" y1="212" x2="834" y2="212" stroke="#818b98" stroke-width="0.8" opacity="0.45"/>
+<line x1="716" y1="228" x2="834" y2="212" stroke="#818b98" stroke-width="0.8" opacity="0.45"/>
+<line x1="742" y1="223" x2="808" y2="215" stroke="#0969da" stroke-width="1.8" marker-end="url(#arrowAccent)"/>
+<text x="770" y="200" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#0969da" text-anchor="middle">challenges</text>
+<circle cx="620" cy="122" r="26" fill="#eef1f4" stroke="#d0d7de" stroke-width="1.2"/>
+<text x="620" y="126" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="600" fill="#1f2328" text-anchor="middle">Author</text>
+<circle cx="812" cy="122" r="26" fill="#eef1f4" stroke="#d0d7de" stroke-width="1.2"/>
+<text x="812" y="126" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="600" fill="#1f2328" text-anchor="middle">Editor</text>
+<circle cx="598" cy="212" r="21" fill="#eef1f4" stroke="#d0d7de" stroke-width="1.2"/>
+<text x="598" y="216" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="600" fill="#1f2328" text-anchor="middle">R1</text>
+<circle cx="716" cy="228" r="21" fill="#eef1f4" stroke="#d0d7de" stroke-width="1.2"/>
+<text x="716" y="232" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="600" fill="#1f2328" text-anchor="middle">R2</text>
+<circle cx="834" cy="212" r="21" fill="#eef1f4" stroke="#d0d7de" stroke-width="1.2"/>
+<text x="834" y="216" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="600" fill="#1f2328" text-anchor="middle">R3</text>
+<text x="556" y="290" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#818b98" text-anchor="start">defer · challenge · withdraw · or hold the position on the record</text>
+<line x1="716" y1="300" x2="716" y2="326" stroke="#59636e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="556" y="332" width="320" height="58" rx="7" fill="#dafbe1" stroke="#1a7f37" stroke-width="1"/>
+<text x="574" y="358" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="start">05_revision_plan.md</text>
+<text x="574" y="377" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#59636e" text-anchor="start">what changes · what needs analysis · what is only unclear</text>
+</svg>

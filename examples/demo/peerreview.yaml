@@ -1,0 +1,48 @@
+# Bundled example. Uses the deterministic mock provider, so `peerreview demo`
+# costs nothing and produces the same transcript every time. Swap `defaults`
+# for a real provider to run this manuscript through actual models.
+project:
+  name: austerity-demo
+  manuscript: papers/manuscript.md
+  appendix: papers/appendix.md
+  journal: British Journal of Political Science
+  runs_dir: runs
+
+deliberation:
+  max_rounds: 6
+  stable_rounds_before_stop: 2
+  intervention_word_limit: 350
+  max_agenda_per_round: 3
+  author_first_response: true
+
+execution:
+  isolation: thread
+  max_workers: 5
+
+context:
+  max_prompt_tokens: 40000
+  recent_messages: 12
+  own_turn_memory: 2
+
+defaults:
+  provider: mock
+  model: mock-1
+  script_path: mock_script.json
+
+agents:
+  author:
+    expertise: the manuscript's author team
+  reviewer1:
+    specialization: substantive
+    expertise: comparative political economy, austerity politics, attribution and blame
+  reviewer2:
+    specialization: methods
+    expertise: causal identification, difference-in-differences, multiple testing
+  reviewer3:
+    specialization: generalist
+    expertise: general-audience importance, claim calibration, external validity
+  editor:
+    expertise: chair of the deliberation
+
+revision_stage:
+  enabled: false
