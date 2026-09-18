@@ -267,6 +267,27 @@ def cmd_export(args: argparse.Namespace) -> int:
     return 0
 
 
+# ----------------------------------------------------------------- dashboard
+def cmd_dashboard(args: argparse.Namespace) -> int:
+    from .dashboard import write_dashboard
+
+    config = load_config(args.project)
+    store = open_store(config)
+    run = pick_run(store, config, args.run_id)
+    out = (Path(args.out) if args.out
+           else run_directory(config.runs_dir, run) / "11_dashboard.html")
+    path = write_dashboard(store, run["run_id"], out)
+    size = path.stat().st_size
+    print(f"Wrote {path} ({size // 1024} KB, self-contained)")
+    if args.open:
+        import webbrowser
+
+        webbrowser.open(path.resolve().as_uri())
+    else:
+        print(f"Open it with:  open {path}")
+    return 0
+
+
 # ----------------------------------------------------------------- intervene
 def cmd_intervene(args: argparse.Namespace) -> int:
     config = load_config(args.project)
@@ -406,6 +427,12 @@ def build_parser() -> argparse.ArgumentParser:
     p_export = sub.add_parser("export", parents=[common], help="write the run outputs")
     p_export.add_argument("--out", help="output directory (default: runs/<date>-<project>)")
     p_export.set_defaults(func=cmd_export)
+
+    p_dashboard = sub.add_parser("dashboard", parents=[common],
+                                 help="write a self-contained HTML dashboard for a run")
+    p_dashboard.add_argument("--out", help="output path (default: the run directory)")
+    p_dashboard.add_argument("--open", action="store_true", help="open it in a browser")
+    p_dashboard.set_defaults(func=cmd_dashboard)
 
     p_intervene = sub.add_parser("intervene", parents=[common],
                                  help="insert human input, reopen an issue, pause or resume")

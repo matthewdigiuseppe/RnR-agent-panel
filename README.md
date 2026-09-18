@@ -163,6 +163,7 @@ the canonical state and `peerreview resume .` picks up at the next round.
 | `peerreview intervene . --message "..."` | step in as the real author, editor or reviewer |
 | `peerreview resume .` | continue after an interruption |
 | `peerreview export .` | (re)write the outputs |
+| `peerreview dashboard . --open` | open the run in a browser |
 
 ### Outputs
 
@@ -182,6 +183,7 @@ runs/2026-09-18-austerity-paper/
 | `08_machine_readable_results.json` | all of the above, structured |
 | `09_revised_manuscript.md` | optional stage, with a per-issue change log |
 | `10_response_to_reviewers.md` | optional stage |
+| `11_dashboard.html` | self-contained dashboard: ledger, transcript, influence graph |
 
 ### Stepping in
 

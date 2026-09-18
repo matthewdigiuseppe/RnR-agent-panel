@@ -25,6 +25,7 @@ FILES = {
     "json": "08_machine_readable_results.json",
     "revised_manuscript": "09_revised_manuscript.md",
     "response_letter": "10_response_to_reviewers.md",
+    "dashboard": "11_dashboard.html",
 }
 
 PRIORITY_BY_SEVERITY = {"major": "essential", "moderate": "important", "minor": "minor"}
@@ -518,4 +519,8 @@ def export_all(store: Store, run_id: str, out_dir: Path) -> dict[str, Path]:
     json_path.write_text(json.dumps(build_results(store, run_id), indent=2, default=str),
                          encoding="utf-8")
     written["json"] = json_path
+    # Imported here: dashboard.py reads this module, so a top-level import would cycle.
+    from .dashboard import write_dashboard
+
+    written["dashboard"] = write_dashboard(store, run_id, out_dir / FILES["dashboard"])
     return written
